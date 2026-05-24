@@ -1,0 +1,101 @@
+# Week 1 — Networking Fundamentals | CompTIA A+ Core 1
+
+## Topics Covered
+- Network services and server roles
+- DNS records and email security records
+- DHCP, DORA, scopes and reservations
+- LANs, VLANs and VPNs
+
+## Key Concepts Learned
+
+### Network Services
+- **DNS server** resolves domain names to IP addresses.
+- **DHCP server** automatically assigns network configuration such as IP address, subnet mask, gateway and DNS server.
+- **File server** centrally stores and shares files.
+- **Print server** manages printers and print queues.
+- **Email server** sends, receives and stores email.
+- **Web server** hosts websites and web applications.
+- **Authentication server** verifies a user's identity before granting access.
+- **Database server** stores structured information.
+- **NTP server** keeps device time synchronized, which is important for logs and encryption.
+- **Syslog** transports logs, while a **SIEM** collects, stores and analyzes them.
+
+### DNS
+- **A record:** hostname to IPv4 address.
+- **AAAA record:** hostname to IPv6 address.
+- **CNAME:** alias from one DNS name to another.
+- **MX:** tells mail servers where email for a domain should be delivered.
+- **TXT:** stores text information used for verification and email security.
+- **SPF:** checks which mail servers are allowed to send email from a domain.
+- **DKIM:** verifies an email's digital signature.
+- **DMARC:** defines what to do if SPF or DKIM checks fail.
+- **TTL:** controls how long a DNS answer is cached.
+
+### DHCP
+- **DORA:** Discover, Offer, Request, Acknowledge.
+- DHCP client uses **UDP 68**; DHCP server uses **UDP 67**.
+- During Discover: `0.0.0.0:68 → 255.255.255.255:67`
+  - `0.0.0.0` means the client does not have an IP yet.
+  - `255.255.255.255` is the local broadcast destination.
+- **Scope:** full DHCP configuration for a subnet.
+- **Pool:** range of IP addresses DHCP may assign.
+- **Lease:** how long a device may use an assigned IP address.
+- **Reservation:** the same MAC address always receives the same IP address through DHCP.
+
+### LANs, VLANs and VPNs
+- A **LAN** is a local network of connected devices.
+- A **broadcast domain** is the group of devices that receives the same broadcast message.
+- A **VLAN** splits one physical switch into multiple separate logical networks or broadcast domains.
+- A **VPN** creates an encrypted connection across a network such as the internet.
+- A **VPN concentrator** manages VPN connections and encrypts/decrypts VPN traffic.
+- **Client-to-site VPN:** one remote employee/device connects to the company network.
+- **Site-to-site VPN:** one office network securely connects to another office network.
+
+## Hands-On Labs
+
+### DNS Lookup and Local Hostname Mapping
+I edited the Windows hosts file to create a local hostname-to-IP mapping:
+
+```text
+testlab.local → 142.250.72.14
+
+I verified that my PC resolved the custom hostname by running:
+
+ping testlab.local
+
+I also queried real DNS records with:
+
+nslookup -type=a google.com
+nslookup -type=aaaa google.com
+nslookup -type=mx google.com
+nslookup -type=txt google.com
+
+What I learned: The hosts file can create a manual local hostname-to-IP mapping on one computer, while nslookup can query real public DNS records.
+
+DHCP Inspection
+
+I inspected my Windows network configuration by running:
+
+ipconfig /all
+
+I identified:
+
+My DHCP-assigned IPv4 address
+Subnet mask
+Default gateway
+DHCP server
+DNS server
+DHCP lease information
+MAC address / physical address
+
+What I learned: My home router acts as the DHCP server, default gateway and DNS forwarder for my PC.
+
+Weak Spots Corrected
+Syslog sends logs; a SIEM stores and analyzes them.
+DNS TTL is how long a DNS answer is cached; a DHCP lease is how long a device may use an assigned IP.
+An MX record tells mail servers where to deliver email for a domain.
+SPF checks which mail servers are authorized to send email from a domain.
+A VLAN splits one physical switch into multiple logical networks.
+Next Topic
+
+Network devices: routers, switches, access points, firewalls, PoE, modems, ONTs and NICs.
