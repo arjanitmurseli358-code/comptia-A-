@@ -1,0 +1,144 @@
+
+---
+
+## GitHub Weekly Progress Log — Week 2
+
+Copy this into GitHub as your concise weekly log:
+
+```markdown
+# Week 2 — CompTIA A+ Core 1 Study Log
+
+## Main Focus
+
+This week I continued the Networking section of CompTIA A+ Core 1 using Professor Messer videos.
+
+The main focus was understanding network devices, IP addressing, internet connection types, network types, and network tools at A+ level.
+
+---
+
+## Topics Studied
+
+### Network Devices
+
+- Router
+- Switch
+- Managed vs unmanaged switches
+- VLANs
+- Access points
+- Patch panels
+- Firewalls
+- PoE
+- Cable modem, DSL modem, and ONT
+- NICs
+
+### IPv4 and IPv6
+
+- IPv4 address format
+- Octets and valid IPv4 ranges
+- Public vs private IPv4 addresses
+- RFC 1918 private address ranges
+- NAT
+- IPv6 purpose and visible format differences
+
+### Assigning IP Addresses
+
+- IP address
+- Subnet mask
+- Default gateway
+- Static IP vs DHCP reservation
+- APIPA
+
+### Internet Connection Types
+
+- Cable internet
+- DSL
+- Fibre
+- Satellite
+- WISP
+
+### Network Types
+
+- LAN
+- WAN
+- PAN
+- MAN
+- SAN
+- WLAN
+
+### Network Tools
+
+- Crimper
+- Wi-Fi analyzer
+- Tone generator and probe
+- Punch-down tool
+- Cable tester
+- Loopback plug
+- Network tap
+
+---
+
+## Key Concepts Understood
+
+- A router connects different networks/subnets using IP addresses.
+- A switch connects local wired devices using MAC addresses.
+- A managed switch supports features such as VLANs, port monitoring, and port control.
+- A VLAN separates groups of connected devices into logical networks/broadcast domains.
+- An access point connects wireless devices to a wired network.
+- A patch panel organizes permanent Ethernet cable runs; a switch forwards traffic.
+- PoE allows Ethernet cabling to carry both data and electrical power.
+- An ONT converts fibre-optic service into Ethernet/network connections.
+- A subnet mask helps a device decide whether traffic is local or must go to the default gateway.
+- A default gateway is the router used to reach other networks or the internet.
+- APIPA addresses usually indicate that DHCP is not reachable.
+- WISP provides internet wirelessly from a ground-based provider antenna.
+- LAN, WAN, PAN, MAN, SAN, and WLAN describe different network scopes or purposes.
+- Network tools are used for cable creation, cable testing, port testing, Wi-Fi analysis, cable tracing, and traffic capture.
+
+---
+
+## Practice and Recall
+
+I completed multiple active recall rounds and CompTIA-style networking practice questions.
+
+Practice included:
+
+- Network devices recall
+- IPv4/IPv6 recall
+- IP assignment recall
+- Network types recall
+- Network tools recall
+- Full mixed networking test split into multiple rounds
+
+---
+
+## Weak Spots Corrected
+
+I corrected or improved the following areas:
+
+- Syslog vs SIEM
+- AAA: Authentication, Authorization, Accounting
+- SQL purpose
+- DHCP Discover source/destination addresses
+- DHCP exclusion vs DHCP reservation
+- Subnet mask purpose
+- Router vs switch under test pressure
+- Cable tester vs loopback plug
+- Satellite internet requiring clear line of sight
+- SAN being mainly for servers accessing storage
+- WLAN meaning wireless local network, not simply wireless internet
+
+---
+
+## Current Status
+
+Networking is mostly understood at A+ Core 1 level.
+
+I can explain the main purpose of each device, network type, IP setting, and network tool, and I can recognize them in basic troubleshooting scenarios.
+
+I still need more mixed practice to make the older networking topics automatic, especially DNS/DHCP/Syslog/SIEM/AAA-style questions.
+
+---
+
+## Next Step
+
+Do one more mixed Networking practice test and retest any missed concepts before moving deeper into the next A+ Core 1 section.
