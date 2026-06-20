@@ -1,0 +1,91 @@
+# Week 5 — RAID and Motherboards
+
+## RAID
+
+* RAID means Redundant Array of Independent Disks.
+* RAID is designed for availability and drive-failure tolerance.
+* RAID is not a replacement for a separate backup.
+
+### RAID 0
+
+* Uses striping.
+* Data is divided across multiple drives.
+* Provides increased performance.
+* Provides no redundancy.
+* Failure of one drive destroys the entire array.
+
+### RAID 1
+
+* Uses mirroring.
+* The same data is written to multiple drives.
+* Two 1 TB drives provide 1 TB of usable capacity.
+* The array can continue operating after one drive fails.
+
+### RAID 5
+
+* Combines striping with distributed parity.
+* Requires at least three drives.
+* Can survive one drive failure.
+* Uses the equivalent capacity of one drive for parity.
+
+### RAID 6
+
+* Combines striping with double distributed parity.
+* Requires at least four drives.
+* Can survive two drive failures.
+* Uses the equivalent capacity of two drives for parity.
+* Five 1 TB drives provide approximately 3 TB usable capacity.
+
+### RAID 10
+
+* Combines RAID 1 and RAID 0.
+* Also called a stripe of mirrors.
+* Requires at least four drives.
+* Can survive multiple drive failures if both drives in the same mirror pair do not fail.
+
+## Motherboard Form Factors
+
+* ATX means Advanced Technology Extended.
+* ATX provides the most expansion space of the three main A+ form factors.
+* Micro-ATX is smaller and usually has fewer expansion slots.
+* Mini-ITX is the smallest and is designed for compact systems.
+* Form factor describes physical size, layout, mounting points, and compatibility.
+
+## Expansion Buses
+
+* A computer bus connects motherboard components.
+* PCI means Peripheral Component Interconnect.
+* PCI uses parallel communication.
+* PCIe means Peripheral Component Interconnect Express.
+* PCIe uses serial lanes.
+* PCIe x1, x4, x8, and x16 describe the number of lanes.
+* Modern graphics cards normally use PCIe x16.
+
+## Motherboard Power and Connections
+
+* Older ATX motherboards used a 20-pin main connector.
+* Modern ATX motherboards normally use a 24-pin connector.
+* The 24-pin connector provides main motherboard power.
+* PCIe 6-pin and 8-pin connectors provide additional power to expansion cards.
+* A PCIe 6-pin connector supplies up to 75 watts.
+* A PCIe 8-pin connector supplies up to 150 watts.
+* Front-panel headers connect power buttons, reset buttons, and LEDs.
+* USB headers connect front-panel USB ports.
+* TPM means Trusted Platform Module.
+* M.2 drives are inserted at an angle and secured with a screw or latch.
+
+## CPUs and Server Motherboards
+
+* Intel and AMD processors require compatible sockets and motherboards.
+* CPU installation should not require force.
+* The CPU must be aligned correctly before locking the retention mechanism.
+* Multisocket server motherboards support multiple physical CPUs.
+* Server motherboards commonly support more RAM and expansion slots.
+* Standard server racks are 19 inches wide.
+
+## Weak Points Identified
+
+* Exact expansions of ATX, PCI, PCIe, AHCI, SAS, EEPROM, DDR, and TPM
+* Difference between RAID and backup
+* RAID 6 usable-capacity calculations
+* Exact display resolutions
