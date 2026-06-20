@@ -1,0 +1,110 @@
+# Week 3 — Hardware Foundations
+
+## Topics Covered
+
+### Display Technologies
+
+* LCD displays use a backlight, liquid crystals, and RGB colour filters.
+* Liquid crystals control how much light passes through each pixel.
+* TN panels are fast but have weaker colour and viewing angles.
+* IPS panels provide better colour accuracy and viewing angles.
+* VA panels provide better contrast and darker blacks.
+* OLED pixels create their own light and do not require a backlight.
+* Mini-LED is still LCD technology but uses many small backlight zones.
+* MicroLED uses individual inorganic light-emitting pixels.
+
+### Display Specifications
+
+* Pixel density is measured in pixels per inch, or PPI.
+* Refresh rate is measured in hertz.
+* Higher refresh rates allow the display to update more times per second.
+* Resolution describes the horizontal and vertical number of pixels.
+* 1080p is 1920 × 1080.
+* 4K UHD is 3840 × 2160.
+* Aspect ratio describes the relationship between width and height.
+* sRGB is a standard colour gamut.
+
+### Network Cabling
+
+* Twisted-pair Ethernet cable uses twisting to reduce interference and crosstalk.
+* Copper Ethernet normally supports distances up to 100 metres.
+* UTP means Unshielded Twisted Pair.
+* STP means Shielded Twisted Pair.
+* Cat5e is commonly used for Gigabit Ethernet.
+* Cat6 and Cat6A can support 10 Gigabit Ethernet at different distances.
+* Plenum-rated cable is designed for air-handling spaces and produces less dangerous smoke during a fire.
+* Direct-burial cable is designed for outdoor or underground installation.
+
+### T568A and T568B
+
+* T568A and T568B define the wire order used in Ethernet terminations.
+* The orange and green pairs change positions.
+* The blue and brown pairs stay in the same positions.
+* The same wiring standard should normally be used at both ends.
+
+### Fibre-Optic Cabling
+
+* Fibre carries information using light instead of electrical signals.
+* The core carries the light.
+* The cladding keeps the light inside the core.
+* Single-mode fibre uses one narrow light path and supports long distances.
+* Multimode fibre supports multiple light paths and is commonly used over shorter distances.
+
+### Patch Panels and Punch-Down Connections
+
+* Permanent building Ethernet cables terminate at patch panels.
+* Short patch cables connect the patch panel to a switch.
+* Patch panels organise and simplify cable management.
+* Punch-down tools terminate wires into patch panels and keystone jacks.
+
+### Peripheral Cables
+
+* USB means Universal Serial Bus.
+* USB 2.0 supports 480 Mbps.
+* USB 3.0 supports 5 Gbps.
+* USB-C describes the connector shape and does not guarantee a specific speed.
+* RS-232 is an older serial communication standard.
+* Console cables provide direct access to routers, switches, and firewalls.
+* Thunderbolt 3 uses USB-C and supports 40 Gbps.
+* Daisy chaining connects multiple devices through one another.
+
+### Video Connections
+
+* HDMI carries audio and video.
+* DisplayPort carries audio and video.
+* DVI normally carries video.
+* VGA carries analogue video.
+* An adapter changes the physical connector while keeping a compatible signal.
+* A converter changes one signal type into another.
+
+### Storage Connections and Devices
+
+* SATA data connects a drive to the motherboard.
+* SATA power connects the drive to the power supply.
+* M.2 is a physical form factor and interface.
+* NVMe is a storage protocol that uses PCIe.
+* AHCI means Advanced Host Controller Interface.
+* SAS means Serial Attached SCSI.
+* EEPROM means Electrically Erasable Programmable Read-Only Memory.
+* Non-volatile storage keeps data without power.
+* HDDs use spinning magnetic platters.
+* SSDs have no moving parts.
+
+### RAM
+
+* RAM stores active data and instructions temporarily.
+* RAM is volatile and loses its contents when power is removed.
+* DIMMs are commonly used in desktop computers.
+* SO-DIMMs are smaller and commonly used in laptops.
+* DDR means Double Data Rate.
+* Dual-channel memory increases memory throughput.
+* When RAM becomes full, the operating system uses slower storage as virtual memory.
+
+## Weak Points Identified
+
+* Exact acronyms and full names
+* USB and Thunderbolt speeds
+* Display resolutions
+* Fibre core versus cladding
+* UTP versus STP
+* Exact Ethernet distance limits
