@@ -1,0 +1,1099 @@
+# CompTIA A+ Core 1 — Weekly Notes
+
+## Week Overview
+
+This week covered:
+
+- Motherboards and expansion
+- BIOS and UEFI
+- TPM and HSM
+- CPU architectures
+- Expansion cards
+- Cooling and airflow
+- Power supplies
+- Printers and multifunction devices
+- Virtualization and hypervisors
+- Virtual networking
+- Containers
+- Cloud computing
+- Cloud deployment and service models
+- Cloud billing and characteristics
+
+---
+
+# 1. Motherboards
+
+## Form Factors
+
+### ATX
+- Largest common desktop motherboard
+- Usually has the most PCIe slots, RAM slots, headers, and expansion options
+
+### microATX
+- Smaller than ATX
+- Fewer expansion slots
+- Common in normal desktop systems
+
+### Mini-ITX
+- Smallest of the three
+- Usually one PCIe slot
+- Used in compact systems
+
+## PCIe
+
+PCIe connects high-speed devices to the CPU/chipset.
+
+Examples:
+
+- GPU
+- NVMe SSD
+- NIC
+- capture card
+- sound card
+
+A PCIe lane carries data in both directions.
+
+Common lane sizes:
+
+- x1
+- x4
+- x8
+- x16
+
+More lanes provide more available bandwidth.
+
+RAM does **not** use PCIe lanes.
+
+## Motherboard Power
+
+### 24-pin ATX connector
+Powers the motherboard and many onboard components.
+
+### CPU power connector
+Usually 4-pin or 8-pin EPS. Provides dedicated power to the CPU.
+
+### GPU power connector
+Provides additional power to high-performance graphics cards.
+
+---
+
+# 2. BIOS and UEFI
+
+## BIOS
+
+Basic Input/Output System.
+
+Firmware used to initialize hardware and begin the boot process.
+
+## UEFI
+
+Unified Extensible Firmware Interface.
+
+Modern replacement for legacy BIOS.
+
+Advantages:
+
+- graphical interface
+- mouse support
+- Secure Boot
+- support for large GPT drives
+- faster and more flexible boot process
+
+## POST
+
+Power-On Self-Test.
+
+Checks and initializes essential hardware during startup.
+
+Examples:
+
+- CPU
+- RAM
+- GPU
+- keyboard
+- storage controllers
+
+## CMOS
+
+Stores firmware settings such as:
+
+- time and date
+- boot order
+- hardware configuration
+
+A CMOS battery keeps these settings when the computer is off.
+
+## Secure Boot
+
+Prevents untrusted boot software from loading.
+
+## BIOS/UEFI Passwords
+
+### User or boot password
+Required to start the computer.
+
+### Supervisor or administrator password
+Required to change firmware settings.
+
+## Jumpers
+
+Physical pins on the motherboard used to change or reset hardware settings.
+
+Example: clearing CMOS.
+
+---
+
+# 3. TPM and HSM
+
+## TPM
+
+Trusted Platform Module.
+
+A TPM:
+
+- generates cryptographic keys
+- stores keys securely
+- protects keys
+- checks whether the system booted in a trusted state
+
+### TPM and BitLocker
+
+BitLocker can store or protect its decryption key using the TPM.
+
+The TPM releases the key when the system boots in a trusted state.
+
+## Root of Trust
+
+A trusted hardware starting point used to verify system integrity.
+
+## TCG
+
+Trusted Computing Group.
+
+Creates standards for technologies such as TPM.
+
+## HSM
+
+Hardware Security Module.
+
+Used to generate, store, and protect keys for many systems or users.
+
+### TPM vs HSM
+
+- TPM: normally installed in one computer
+- HSM: centralized device used by many systems
+
+---
+
+# 4. CPU Architectures
+
+## x86
+
+- 32-bit architecture
+- supports around 4 GB of addressable memory
+
+## x64
+
+- 64-bit architecture
+- supports much more RAM
+- modern Intel and AMD desktop CPUs use x64
+
+## ARM
+
+Different CPU architecture focused strongly on:
+
+- power efficiency
+- low heat
+- battery life
+
+Common in:
+
+- phones
+- tablets
+- some laptops
+- embedded devices
+
+## Program Files Folders
+
+### Program Files
+Usually stores 64-bit applications.
+
+### Program Files (x86)
+Usually stores 32-bit applications on 64-bit Windows.
+
+## CPU Cores
+
+Each core can process instructions.
+
+More cores allow more work to be handled simultaneously.
+
+---
+
+# 5. Expansion Cards
+
+## Integrated GPU
+
+Built into the CPU or motherboard platform.
+
+Advantages:
+
+- lower power use
+- lower cost
+- enough for normal desktop tasks
+
+## Discrete GPU
+
+Separate card installed into a PCIe slot.
+
+Advantages:
+
+- more graphics performance
+- dedicated VRAM
+- better for gaming, rendering, and GPU workloads
+
+The monitor should normally be connected to the discrete GPU when one is installed.
+
+## NIC
+
+Network Interface Card.
+
+Connects a system to a network.
+
+## Capture Card
+
+Captures video from another device.
+
+Examples:
+
+- console gameplay
+- camera feed
+- another computer
+
+## Device Manager
+
+Windows tool used to:
+
+- view hardware
+- update drivers
+- disable devices
+- check hardware errors
+
+---
+
+# 6. Cooling and Airflow
+
+## Normal Airflow
+
+- front fans: intake
+- bottom fans: intake
+- rear fan: exhaust
+- top fans: exhaust
+
+Cool air enters from the front/bottom.
+
+Hot air exits from the rear/top.
+
+## Heat Sink
+
+Transfers heat away from a component.
+
+## Thermal Paste
+
+Fills microscopic gaps between the CPU and cooler.
+
+This removes insulating air pockets and improves heat transfer.
+
+## Thermal Pads
+
+Used between components and heat sinks where a larger gap must be filled.
+
+Common on:
+
+- VRAM
+- motherboard VRMs
+- SSD heat sinks
+
+## Cable Management
+
+Keeps cables from blocking airflow.
+
+## Liquid Cooling
+
+Uses:
+
+- cold plate
+- pump
+- tubes
+- radiator
+- fans
+
+---
+
+# 7. Power Supplies
+
+## Main Function
+
+A PSU converts AC from the wall into DC used by computer components.
+
+## Main Voltage Rails
+
+### 3.3 V
+Used by:
+
+- RAM
+- chipsets
+- motherboard electronics
+
+### 5 V
+Used by:
+
+- USB
+- some storage electronics
+- legacy devices
+
+### 12 V
+Used by:
+
+- CPU
+- GPU
+- fans
+- motors
+- pumps
+
+## Electrical Formula
+
+Watts = Volts × Amps
+
+## Regional Power
+
+### United States
+- around 110–120 V
+- 60 Hz
+
+### Europe
+- around 220–240 V
+- 50 Hz
+
+## Auto Input Detection
+
+Modern PSUs often automatically support different regional voltages.
+
+## +5VSB
+
+5-volt standby rail.
+
+Provides limited power while the system is technically off.
+
+Used for features such as:
+
+- wake-on-LAN
+- USB charging
+- soft power button
+
+## Modular PSU
+
+Cables can be removed or added as needed.
+
+Advantages:
+
+- cleaner cable management
+- improved airflow
+- easier installation
+
+## Redundant PSU
+
+Two or more PSUs provide backup power.
+
+## Hot-Swappable PSU
+
+Can be replaced while the system remains running.
+
+## 80 Plus
+
+Efficiency certification.
+
+Common order:
+
+- 80 Plus
+- Bronze
+- Silver
+- Gold
+- Platinum
+- Titanium
+
+---
+
+# 8. Multifunction Devices
+
+MFD = Multifunction Device.
+
+Common functions:
+
+- print
+- scan
+- copy
+- fax
+
+## Common Features
+
+- USB
+- Ethernet
+- Wi-Fi
+- Bluetooth
+- duplex printing
+- multiple trays
+- Automatic Document Feeder
+- badge or PIN printing
+- audit logs
+
+## ADF
+
+Automatic Document Feeder.
+
+Automatically feeds multiple pages into the scanner.
+
+## SMB
+
+Server Message Block.
+
+Can be used to scan files to a network folder.
+
+## PCL and PostScript
+
+Printer languages used to describe how a page should be printed.
+
+---
+
+# 9. Laser Printers
+
+## Printing Process
+
+Remember:
+
+**Charge → Expose → Develop → Transfer → Fuse → Clean**
+
+### 1. Charge
+The drum receives a negative electrical charge.
+
+### 2. Expose
+The laser reduces or neutralizes the charge where the image should appear.
+
+### 3. Develop
+Negatively charged toner sticks to the exposed areas of the drum.
+
+### 4. Transfer
+The paper receives a positive charge and pulls toner from the drum.
+
+### 5. Fuse
+Heat and pressure permanently bond the toner to the paper.
+
+### 6. Clean
+Residual toner is removed from the drum.
+
+## OPC Drum
+
+Organic Photoconductor drum.
+
+Photosensitive component used to form the image.
+
+Protect it from light.
+
+## Maintenance Kit
+
+May include:
+
+- fuser
+- feed rollers
+- transfer roller
+
+Use the page counter and reset it after maintenance.
+
+## Laser Printer Safety
+
+- do not use normal compressed air for loose toner
+- use a toner-rated vacuum
+- use cold water if toner gets on skin
+- use isopropyl alcohol for rollers when appropriate
+
+---
+
+# 10. Inkjet Printers
+
+Inkjet printers spray tiny liquid-ink droplets onto paper.
+
+## CMYK
+
+- Cyan
+- Magenta
+- Yellow
+- Key/Black
+
+## Advantages
+
+- inexpensive printer
+- quiet
+- good colour output
+- good photo quality
+- high resolution
+
+## Disadvantages
+
+- expensive ink
+- print heads can clog
+- ink can fade
+- ink may dry out
+
+## Maintenance
+
+### Cleaning
+Removes dried or excess ink.
+
+Useful for:
+
+- streaks
+- missing lines
+- blocked nozzles
+
+### Calibration
+Aligns colours and print-head placement.
+
+---
+
+# 11. Thermal Printers
+
+Thermal printers use heat on thermochromic paper.
+
+They do not use ink or toner.
+
+## Common Uses
+
+- receipts
+- shipping labels
+- barcode labels
+
+## Advantages
+
+- quiet
+- simple
+- inexpensive to operate
+- few moving parts
+
+## Maintenance
+
+- use the correct paper roll
+- clean the heating element with isopropyl alcohol
+- use a cleaning card
+- keep the paper path clean
+
+Important receipts can fade from heat, light, or age.
+
+---
+
+# 12. Dot-Matrix Printers
+
+Pins strike an inked ribbon to form characters and images.
+
+## Common Uses
+
+- multipart forms
+- invoices
+- industrial environments
+- continuous paper
+
+## Advantages
+
+- can print through several paper layers
+- low cost per page
+- durable
+
+## Disadvantages
+
+- noisy
+- low resolution
+- slower than modern printers
+
+## Common Parts
+
+- print head
+- pins
+- ribbon cartridge
+- tractor feed
+- heat sink
+
+## Troubleshooting
+
+- faded output: replace ribbon
+- missing dots/lines: failed print-head pin
+- jams: check tractor-feed alignment and paper path
+
+---
+
+# 13. Virtualization
+
+Virtualization allows multiple operating systems to run on one physical computer.
+
+## Virtual Machine
+
+A software-based computer with:
+
+- guest operating system
+- virtual CPU
+- allocated RAM
+- virtual storage
+- virtual network adapter
+
+Resources come from the physical host.
+
+## Host OS
+
+The main operating system installed on the physical computer.
+
+## Guest OS
+
+The operating system running inside a VM.
+
+## Snapshot
+
+A saved point-in-time state of a VM.
+
+Used to return to a known working state.
+
+## Sandboxing
+
+Running software in an isolated environment so problems stay contained.
+
+## Hypervisor
+
+Software that creates and manages VMs.
+
+It allocates:
+
+- CPU
+- RAM
+- storage
+- networking
+
+## Type 1 Hypervisor
+
+Runs directly on physical hardware.
+
+Also called a bare-metal hypervisor.
+
+Examples:
+
+- VMware ESXi
+- Microsoft Hyper-V in bare-metal/server use
+
+## Type 2 Hypervisor
+
+Runs on top of a normal host OS.
+
+Also called a hosted hypervisor.
+
+Examples:
+
+- VirtualBox
+- VMware Workstation
+- Parallels Desktop
+
+## CPU Virtualization Support
+
+- Intel: VT
+- AMD: AMD-V
+
+## VM Escape
+
+Malware or an attacker exploits a hypervisor flaw and escapes one VM to reach:
+
+- the host
+- other VMs
+- data outside the original VM
+
+Each VM still needs:
+
+- firewall
+- updates
+- anti-malware
+- hardening
+- strong passwords
+
+## VDI
+
+Virtual Desktop Infrastructure.
+
+The user desktop runs on a remote server or in the cloud.
+
+The local device mainly provides:
+
+- display
+- keyboard
+- mouse
+- network connection
+
+## DaaS
+
+Desktop as a Service.
+
+A cloud-delivered virtual desktop service.
+
+---
+
+# 14. Virtual Networking
+
+## NAT
+
+The VM is placed on a separate virtual subnet.
+
+It reaches outside networks through address translation.
+
+Outside devices normally see the host's address.
+
+Use case:
+
+- normal internet access for a VM
+- software testing
+- basic Linux practice
+
+## Bridged Networking
+
+The VM acts like another physical device on the real LAN.
+
+It gets its own LAN IP address.
+
+Use case:
+
+- test server
+- Active Directory lab
+- SSH/RDP access
+- communication with physical devices
+
+## Private/Internal Networking
+
+VMs communicate only with other selected VMs on the isolated virtual network.
+
+Usually no internet or real-LAN access.
+
+Use case:
+
+- isolated attack lab
+- malware analysis
+- private SOC lab
+- safe network experiments
+
+---
+
+# 15. Containers
+
+A container packages:
+
+- application
+- dependencies
+- libraries
+- configuration
+
+Containers share the host operating system kernel.
+
+They do not each need a complete guest OS.
+
+## Containers vs VMs
+
+### VM
+- full guest OS
+- more RAM and storage
+- slower startup
+- stronger separation
+- can run different guest operating systems
+
+### Container
+- shares host OS kernel
+- lightweight
+- fast startup
+- easy to copy and recreate
+- application-focused
+
+## Docker
+
+Popular container platform.
+
+Docker is not the definition of a container; it is one platform used to run containers.
+
+---
+
+# 16. Cloud Computing
+
+Cloud computing provides remote access to:
+
+- CPU
+- RAM
+- storage
+- networking
+- applications
+- services
+
+## Main Advantages
+
+- fast deployment
+- no need to buy physical hardware first
+- scale resources up or down
+- pay only for what is needed
+- deploy in different geographic regions
+- high availability
+- easier disaster recovery
+
+---
+
+# 17. Cloud Deployment Models
+
+## Public Cloud
+
+Owned and managed by a cloud provider.
+
+Resources are shared by many customers.
+
+Examples:
+
+- Microsoft Azure
+- Amazon Web Services
+- Google Cloud
+
+## Private Cloud
+
+Cloud infrastructure dedicated to one organization.
+
+Usually owned or controlled by that organization.
+
+Advantages:
+
+- more control
+- dedicated resources
+- sensitive data remains private
+- no public-cloud usage bill after infrastructure is purchased
+
+Disadvantage:
+
+- large upfront cost
+- organization maintains everything
+
+## Hybrid Cloud
+
+One organization uses both:
+
+- private cloud
+- public cloud
+
+## Community Cloud
+
+Several organizations with similar needs share cloud infrastructure.
+
+Example:
+
+- several healthcare organizations sharing a compliant cloud
+- multiple government agencies sharing infrastructure
+
+---
+
+# 18. Cloud Service Models
+
+## IaaS
+
+Infrastructure as a Service.
+
+The provider manages:
+
+- physical data centre
+- physical servers
+- physical storage
+- physical networking
+- virtualization layer
+
+The customer manages:
+
+- operating system
+- OS updates
+- applications
+- application updates
+- data
+- users
+- much of the network configuration
+- security inside the VM
+
+Memory:
+
+**IaaS = manage the virtual computer and the app.**
+
+## PaaS
+
+Platform as a Service.
+
+The provider manages:
+
+- physical infrastructure
+- operating system
+- runtime
+- application platform
+- platform updates
+
+The customer manages:
+
+- application code
+- application data
+- users
+- application configuration
+
+Memory:
+
+**PaaS = bring the code.**
+
+## SaaS
+
+Software as a Service.
+
+The provider manages almost everything.
+
+The customer mainly manages:
+
+- account
+- users
+- permissions
+- data entered into the service
+- endpoint device
+
+Examples:
+
+- Gmail
+- Google Drive
+- Microsoft 365
+- Dropbox
+- Salesforce
+
+Memory:
+
+**SaaS = log in and use the software.**
+
+---
+
+# 19. Cloud Billing
+
+## Metered Utilization
+
+You pay based on actual usage.
+
+Examples:
+
+- CPU time
+- storage used
+- network traffic
+- number of requests
+
+A busier month can cost more.
+
+## Nonmetered Utilization
+
+You pay a fixed recurring price for a defined amount of resources.
+
+Example:
+
+- fixed monthly price for up to 2 TB of storage
+
+## Ingress
+
+Data entering the cloud.
+
+Examples:
+
+- uploading a file
+- sending logs to a cloud SIEM
+- sending an email to a cloud mail server
+- submitting data to a cloud application
+
+Ingress may be billed, depending on the provider.
+
+## Egress
+
+Data leaving the cloud.
+
+Examples:
+
+- downloading a file
+- webpage content sent to a user
+- restoring cloud backups
+- exporting logs
+- streaming video to customers
+
+Egress is often billed differently from ingress.
+
+---
+
+# 20. Cloud Characteristics
+
+## Elasticity
+
+Ability to quickly scale resources up or down based on demand.
+
+Example:
+
+- add more servers during heavy traffic
+- remove servers when traffic decreases
+
+## High Availability
+
+Systems remain accessible even when hardware or a data centre fails.
+
+Achieved through:
+
+- redundancy
+- failover
+- multiple servers
+- multiple data centres
+
+## File Synchronization
+
+Data is copied and kept consistent across systems or data centres.
+
+## Multi-Tenancy
+
+Many customers share the same underlying cloud infrastructure.
+
+Their environments and data remain logically separated.
+
+---
+
+# Weak Points Found During Recall
+
+These were corrected during review:
+
+- PCIe lane definition
+- BIOS vs UEFI
+- TPM and BitLocker
+- 3.3 V / 5 V / 12 V rail uses
+- NAT vs bridged networking
+- IaaS vs PaaS vs SaaS
+
+---
+
+# Current Progress
+
+Completed:
+
+- Motherboards
+- BIOS/UEFI
+- CPUs
+- power
+- cooling
+- printers
+- virtualization
+- containers
+- cloud computing
+
+Next section:
+
+- Hardware and network troubleshooting
+
+After troubleshooting:
+
+1. Full Core 1 mixed recap
+2. Identify weak points
+3. Review only weak points
+4. Practice exams
+5. Retest until scores are consistently exam-ready
+
