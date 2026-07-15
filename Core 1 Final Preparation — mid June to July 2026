@@ -1,0 +1,23 @@
+
+
+- Completed Professor Messer practice exams A, B, and C
+- Used outside-source exams for validation
+- Repaired weak areas in:
+  - printer troubleshooting
+  - virtualization and cloud
+  - storage and RAID
+  - connectors and power
+  - IPv6 link-local addressing
+  - Wi-Fi standards
+- Performed Windows networking labs:
+  - ipconfig /all
+  - Get-NetAdapterBinding
+  - Get-NetIPAddress
+- Prepared and tested the Pearson OnVUE environment
+- Final Core 1 exam result:
+Main lessons:
+- Understanding the mechanism matters more than memorizing answer letters.
+- RAID 0 is striping; RAID 1 is mirroring.
+- fe80:: is IPv6 link-local.
+- M.2 receives data and power through the motherboard slot.
+- Troubleshooting questions require identifying what changed and what was already ruled out.
