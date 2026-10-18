@@ -1,0 +1,504 @@
+
+**Week:** 2026-10-12 to 2026-10-18
+
+## Overview
+
+This week I focused mainly on Windows administration, system utilities, troubleshooting tools, operating system features, and the Windows command line.
+
+The main goal was to understand what the tools actually do in a real IT environment instead of only memorizing their names for the exam.
+
+---
+
+## Windows Editions and Features
+
+Reviewed the differences between Windows editions and when certain features are available.
+
+### Key points
+
+- Windows Home is aimed primarily at normal consumer use.
+- Windows Pro includes business features such as:
+  - Active Directory domain join
+  - BitLocker
+  - Group Policy
+  - Remote Desktop hosting
+- A Windows Home computer cannot simply be configured to join an Active Directory domain. It needs to be upgraded to an edition such as Windows Pro.
+
+I also reinforced the difference between being an RDP client and an RDP host.
+
+---
+
+## Workgroups vs Domains
+
+Reviewed how Windows systems can be organized in a network.
+
+### Workgroup
+
+- Peer-to-peer
+- Each computer manages its own users and permissions
+- No central authentication server
+- Better suited to small/simple networks
+
+### Domain
+
+- Centralized administration
+- Uses Active Directory
+- Users, computers, permissions, and policies can be managed centrally
+- Users can authenticate using domain accounts
+
+This helped me understand why companies use domains instead of configuring every workstation individually.
+
+---
+
+## Active Directory and Group Policy
+
+Reviewed the purpose of Active Directory Domain Services and Group Policy.
+
+Active Directory provides a centralized database for:
+
+- users
+- computers
+- groups
+- authentication
+- permissions
+
+Group Policy allows administrators to centrally configure settings on users and computers.
+
+Important commands:
+
+- `gpupdate` / `gpupdate /force` → refresh Group Policy
+- `gpresult /r` → show which policies are currently applied
+
+Key distinction:
+
+`gpupdate` = apply/update policy  
+`gpresult` = inspect the result
+
+---
+
+## Task Manager
+
+Reviewed the main Task Manager sections and how they can be used for troubleshooting.
+
+### Processes
+
+Shows currently running applications and processes.
+
+Useful for identifying:
+
+- high CPU usage
+- high memory usage
+- frozen applications
+
+### Performance
+
+Shows overall system resource usage.
+
+Examples:
+
+- CPU
+- memory
+- disk
+- network
+
+### Startup Apps
+
+Shows applications configured to launch when Windows starts or when the user signs in.
+
+Useful when troubleshooting slow startup/login performance.
+
+### Users
+
+Shows users currently logged into the system and the resources they are consuming.
+
+### Services
+
+Shows Windows services and whether they are running or stopped.
+
+Shortcut:
+
+`Ctrl + Shift + Esc`
+
+opens Task Manager directly.
+
+---
+
+## Windows System Utilities
+
+Studied several built-in Windows administration and troubleshooting utilities.
+
+### System Information — `msinfo32`
+
+Provides detailed information about:
+
+- hardware
+- BIOS/UEFI
+- installed RAM
+- motherboard/system information
+- Windows version
+- system configuration
+
+Useful when I need a detailed overview of a computer without opening it physically.
+
+---
+
+### Resource Monitor — `resmon`
+
+Provides detailed real-time information about:
+
+- CPU usage
+- memory usage
+- disk activity
+- network activity
+
+Useful when troubleshooting a particular process that is consuming system resources.
+
+Important distinction:
+
+Resource Monitor is mainly for detailed **live resource usage**.
+
+---
+
+### System Configuration — `msconfig`
+
+Used to configure and troubleshoot Windows startup and boot behavior.
+
+Can help diagnose problems involving:
+
+- startup configuration
+- boot options
+- services
+
+---
+
+### Disk Cleanup — `cleanmgr`
+
+Used to remove unnecessary files and free storage space.
+
+Examples include:
+
+- temporary files
+- cached files
+- old system files
+
+---
+
+### Defragmentation
+
+HDDs can benefit from defragmentation because the mechanical read/write head must physically move across the disk.
+
+SSDs do not have mechanical seek time, so traditional manual defragmentation is unnecessary and creates additional writes.
+
+---
+
+### Registry Editor — `regedit`
+
+Used to view and modify the Windows Registry.
+
+The Registry contains configuration information for:
+
+- Windows
+- hardware
+- applications
+- users
+
+Changes should be made carefully because incorrect registry changes can cause system problems.
+
+---
+
+## Windows Command Line
+
+This week I also practiced Windows command-line administration.
+
+### System Identification
+
+`hostname`
+
+Shows the name of the computer.
+
+Mental association:
+
+`hostname` → Which computer am I on?
+
+---
+
+`winver`
+
+Shows:
+
+- Windows edition
+- Windows version
+- OS build
+
+Useful when checking compatibility or troubleshooting update/version issues.
+
+---
+
+`whoami`
+
+Shows which user account is currently being used.
+
+---
+
+`whoami /all`
+
+Shows more detailed security information including:
+
+- username
+- SID
+- group memberships
+- privileges
+
+Mental association:
+
+`hostname` → which computer?  
+`whoami` → which user?
+
+---
+
+## File and Directory Navigation
+
+`dir`
+
+Lists the files and directories inside the current working directory.
+
+---
+
+`md APlusLab`
+
+Creates a new directory.
+
+---
+
+`cd APlusLab`
+
+Moves into the directory.
+
+---
+
+`cd ..`
+
+Moves one directory level upward.
+
+---
+
+`rd APlusLab`
+
+Removes an empty directory.
+
+Key associations:
+
+- `md` = make directory
+- `cd` = change directory
+- `cd ..` = parent directory
+- `rd` = remove directory
+
+---
+
+## Command-Line Help
+
+Practiced using:
+
+`help dir`
+
+and:
+
+`dir /?`
+
+These display command syntax and available options.
+
+An important lesson was that I do not need to memorize every possible command switch. Windows provides built-in documentation that administrators can use when needed.
+
+---
+
+## Check Disk — `chkdsk`
+
+Used for filesystem and storage-related troubleshooting.
+
+### `chkdsk /f`
+
+Checks the filesystem and fixes logical filesystem errors.
+
+Example:
+
+A computer unexpectedly loses power and NTFS becomes inconsistent.
+
+---
+
+### `chkdsk /r`
+
+Performs a deeper check for unreadable/bad sectors and attempts to recover readable information.
+
+`/r` also includes the checks performed by `/f`.
+
+Key distinction:
+
+`/f` → filesystem errors  
+`/r` → bad/unreadable sectors + filesystem checks
+
+---
+
+## System File Checker — `sfc`
+
+`SFC` checks protected Windows operating-system files.
+
+Important command:
+
+`sfc /scannow`
+
+Useful if Windows system files may have been:
+
+- corrupted
+- modified by malware
+- replaced by software
+- damaged by an update
+
+Important troubleshooting distinction:
+
+`chkdsk` → filesystem/drive problem  
+`sfc` → Windows system-file problem
+
+---
+
+## DiskPart
+
+Practiced using DiskPart to understand how Windows sees physical storage.
+
+Opened it with:
+
+`diskpart`
+
+Safe inspection commands used:
+
+- `list disk`
+- `list volume`
+- `select disk 0`
+- `list partition`
+- `exit`
+
+### `list disk`
+
+Shows physical storage devices.
+
+Example:
+
+Disk 0 = physical SSD  
+Disk 1 = another physical SSD/HDD
+
+---
+
+### `list partition`
+
+Shows the partitions on a selected physical disk.
+
+A Windows system disk may contain:
+
+- EFI/System partition
+- Microsoft Reserved partition
+- Windows partition
+- Recovery partition
+
+---
+
+### `list volume`
+
+Shows Windows volumes and information such as:
+
+- drive letter
+- filesystem
+- size
+- label
+
+---
+
+## Storage Mental Model
+
+The biggest concept I reinforced was how the different storage terms connect:
+
+Physical SSD/HDD  
+→ Disk  
+→ Partitions  
+→ Filesystem  
+→ Volumes  
+→ Drive letters such as `C:`
+
+Partitioning defines sections of a drive.
+
+Formatting places a filesystem such as NTFS on a partition so files can be stored and organized.
+
+---
+
+## DiskPart Safety
+
+DiskPart is extremely powerful, so I only used inspection commands.
+
+Commands such as the following can destroy data if used incorrectly:
+
+- `clean`
+- `format`
+- `delete partition`
+- `delete volume`
+
+This reinforced the importance of confirming the selected disk before making storage changes.
+
+---
+
+## Main Troubleshooting Associations
+
+`hostname`  
+→ Which computer am I controlling?
+
+`whoami /all`  
+→ Which user/security context am I using?
+
+`winver`  
+→ Which Windows version/build?
+
+`dir` / `cd`  
+→ Where am I in the filesystem?
+
+`msinfo32`  
+→ Detailed system information
+
+`resmon`  
+→ Detailed live resource usage
+
+`gpupdate`  
+→ Refresh Group Policy
+
+`gpresult /r`  
+→ Show applied Group Policies
+
+`chkdsk /f`  
+→ Fix logical filesystem errors
+
+`chkdsk /r`  
+→ Check unreadable sectors and recover readable data
+
+`sfc /scannow`  
+→ Repair protected Windows system files
+
+`diskpart`  
+→ Inspect/manage disks, partitions, and volumes
+
+---
+
+## What I Improved This Week
+
+This week I moved away from simply recognizing tool names and started connecting each tool to the problem it is designed to solve.
+
+I also did hands-on command-line practice instead of relying only on videos and multiple-choice questions.
+
+The biggest concepts I want to retain are:
+
+1. Filesystem problems and Windows system-file problems are different.
+2. `chkdsk` and `sfc` solve different types of corruption.
+3. `gpupdate` changes/refreshes policy while `gpresult` inspects it.
+4. `hostname` identifies the machine while `whoami` identifies the user.
+5. A physical disk can contain multiple partitions and volumes.
+6. Command-line tools are easier to remember when I understand the real troubleshooting scenario behind them.
+
+## Next Week
+
+Continue through the Professor Messer Core 2 objectives while keeping the same process:
+
+Video → understand the mechanism → active recall → hands-on practice → troubleshooting scenarios → weekly review.
