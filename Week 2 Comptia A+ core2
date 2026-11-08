@@ -1,0 +1,50 @@
+CompTIA A+ Core 2 — Weekly Study Log
+Week: October 19–25, 2026
+Focus: Windows networking and administration, macOS, Linux fundamentals, and hands-on command-line practice
+Learning resources: Professor Messer videos, Windows tools, Linux Mint VM, active recall
+What I studied
+Windows networking and administration
+This week, I worked on how Windows connects to and manages network resources:
+- IP configuration: DHCP, static IP addresses, APIPA, and alternate configurations.
+- Network connections, shared folders, mapped network drives, and hidden shares.
+- Workgroups versus domains; Active Directory and Group Policy concepts.
+- Windows Defender Firewall profiles and inbound/outbound rules.
+- Command-line networking and administrative tools, including nslookup, net use, net view, net user, pathping, and gpresult /r.
+I also revisited Windows monitoring and troubleshooting tools: Task Manager, Resource Monitor, Performance Monitor, Device Manager, Event Viewer, and Task Scheduler. The distinction between Resource Monitor (detailed live activity), Performance Monitor (counters and historical logging), and Task Manager (quick overview) took extra practice.
+macOS fundamentals
+I studied the macOS system-settings interface and where to manage:
+- Displays and network connections.
+- Printers.
+- Privacy and security options.
+- Accessibility settings.
+- Time Machine backups.
+This was concept study; I did not complete a macOS hands-on lab.
+Linux fundamentals
+I covered how Linux is organized and administered:
+- Linux kernel, boot processes, systemd, daemons, and root privileges.
+- Common configuration files: /etc/passwd, /etc/shadow, /etc/hosts, /etc/resolv.conf, /etc/fstab.
+- Navigating and managing files with pwd, ls, cd, cp, mv, and rm.
+- Permissions and ownership using chmod and chown.
+- Searching and reading information with grep, find, cat, and man.
+- System and storage commands including ps, top, mount, fsck, sudo, su, and package-manager concepts (apt, dnf).
+Practical work
+Linux Mint VM — command-line exercises (October 22):
+- Navigated the file system with pwd, ls, and ls -la.
+- Worked with files and permissions, including chmod.
+- Practiced grep, mount, sudo, ps -e, and nano.
+- Made and corrected mistakes while managing test files, which helped connect the commands to actual behavior.
+This was guided practice, not a claim of a completed production project.
+Active recall and difficulties
+The weekly review revealed that I needed more confident recall of command names and how to choose between similar utilities. My review targets were:
+- nslookup — DNS lookups.
+- net use / net view / net user — different networking and account tasks.
+- pathping — path and packet-loss troubleshooting.
+- gpresult /r — applied Group Policy information.
+- Sleep versus Hibernate — RAM/power versus storing state on disk.
+- Task Manager Performance versus Resource Monitor versus Performance Monitor.
+I revisited these on October 24–25 rather than rewatching every lesson.
+What changed in my learning
+I noticed that recognizing a tool in a video was easier than recalling its exact purpose without hints. Linux command-line practice was especially useful because I could test commands instead of trying to memorize the names alone.
+
+Next: Start the application-installation and security topics in Core 2, while continuing short reviews of the Windows utilities and commands I confuse.
+Personal study progress log. The items above reflect study and practice, not professional work experience.
