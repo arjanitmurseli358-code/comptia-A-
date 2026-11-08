@@ -1,0 +1,47 @@
+CompTIA A+ Core 2 — Weekly Study Log
+Week: October 26 – November 1, 2026
+Focus: Application installation, security fundamentals, identities, access control, and common attacks
+Learning resources: Professor Messer videos/transcripts, Q&A, active recall
+What I studied
+Installing and managing applications
+I started the week with Professor Messer's Installing Applications lesson (October 26). Main topics included:
+- Application compatibility and system requirements, including 32-bit versus 64-bit concerns.
+- Per-user versus system-wide installation.
+- Installation media, ISO files, and system imaging.
+- Local versus cloud-delivered applications and collaboration tools.
+- Why repeatable, managed installations matter in business environments.
+Security controls and best practices
+I moved into the fundamentals of protecting devices, accounts, and networks:
+- Physical security versus logical security.
+- Firewalls, access-control lists (ACLs), and basic network access restrictions.
+- Zero Trust and why being on an internal network does not automatically make access trustworthy.
+- Authentication, authorization, MFA, and time-based one-time passwords (TOTP).
+- Wireless security and the importance of appropriate access controls.
+Enterprise identities and directories
+I built on earlier Windows and domain lessons:
+- Active Directory domains and centralized user/device management.
+- Security groups, permissions, and folder redirection.
+- Kerberos authentication at a conceptual level.
+- The difference between proving identity and deciding which resources an identity can access.
+Threats and attack techniques
+I learned to recognize the purpose and impact of different attacks, including:
+- Phishing and other social-engineering techniques.
+- Malware and compromised endpoints.
+- SQL injection and application-related attacks.
+- Denial-of-service attacks.
+- Insider threats.
+- Endpoint detection and response (EDR) as part of security investigation.
+Active recall and review
+During the week, I used Q&A and recap questions to check whether I understood the mechanism, not just the name of each concept.
+
+Topics that needed more attention:
+- Firewall rules versus ACLs.
+- Per-user versus system-wide application installations.
+- The basic Kerberos authentication flow.
+- What an analyst actually does when investigating an EDR alert.
+A follow-up review around the beginning of November showed good overall understanding, with the above as targeted points to revisit rather than reasons to restart the whole section.
+Takeaways
+This week shifted my Core 2 study from operating-system tools toward security decisions: who can access a resource, how that access is verified, and how an organization responds when something malicious happens.
+
+Next: Continue malware-removal procedures and security maintenance, then study device, SOHO network, and browser security.
+Personal study progress log. I am documenting concepts studied and recall work; no unverified labs or professional incidents are claimed.
